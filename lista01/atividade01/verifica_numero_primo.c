@@ -19,6 +19,6 @@ int verificaNumeroPrimo(int n){
 }
 
 int main(int argc, char* argv[]){    
-    printf("%d", verificaNumeroPrimo(argc));
+    printf("%d", verificaNumeroPrimo(atoi(argv[1])));
     return 0;
 }
