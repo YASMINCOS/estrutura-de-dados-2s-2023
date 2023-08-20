@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void multiplica_array(int array1[], int array2[], int resultado[], int tamanho) {
     for (int i = 0; i < tamanho; i++) {

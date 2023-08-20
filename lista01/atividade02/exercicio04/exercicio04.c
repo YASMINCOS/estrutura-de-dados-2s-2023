@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 
 int conta_int_array(int array[], int tamanho, int numero) {
     int contador = 0;
