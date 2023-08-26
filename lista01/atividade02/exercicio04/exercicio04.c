@@ -15,9 +15,9 @@ int conta_int_array(int array[], int tamanho, int numero) {
 }
 
 int main() {
-    int array[] = {5, 7, 9, 6, 7, 11, 6, 5};
+    int array[] = {5, 7, 9, 6, 7, 11, 6, 5,7};
     int tamanho = sizeof(array) / sizeof(array[0]);
-    int numero = 6;
+    int numero = 7;
 
     int resultado = conta_int_array(array, tamanho, numero);
 

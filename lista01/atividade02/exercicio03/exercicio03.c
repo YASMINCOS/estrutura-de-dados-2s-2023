@@ -19,7 +19,7 @@ int main(int argc, char* argv[]){
 
     char *array [] = {"texto", "J", "EDA", "EDO"};
     int tamanho = sizeof(array)/sizeof(array[0]);
-    char *elemento = "O";
+    char *elemento = "J";
 
 
     if(verificar_exestincia_elemento(array, tamanho, elemento)){
