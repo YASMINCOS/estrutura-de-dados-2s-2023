@@ -1,7 +1,7 @@
 # ESTRUTURA DE DADOS
 # LISTA 01
-- objetivo
-- conteudo
+- objetivo: Introdução a estrutura de dados.
+- conteudo: Leitura de arquivos, Estruturas, Ordenação.
 # Lista 02
 - objetivo 
 - conteudo

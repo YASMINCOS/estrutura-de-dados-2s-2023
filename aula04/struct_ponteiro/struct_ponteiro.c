@@ -26,7 +26,7 @@ int main (int argc, char* argv[]){
     //printf("p1 = %d\n",*p1);
 
 
-   // P ponto;
+    //P ponto;
     //ponto.x = 1;
     //ponto.y = 2;
     //printf("(%d, %d)",ponto.x,ponto.y);
