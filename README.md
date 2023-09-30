@@ -3,7 +3,7 @@
 - objetivo: Introdução a estrutura de dados.
 - conteudo: Leitura de arquivos, Estruturas, Ordenação.
 # Lista 02
-- objetivo: Ordenação, Pilhas.
+- objetivo: Ordenação, Pilhas - FILO (First In Last Out), Filas - FIFO (First In First Out).
 - conteudo
 # Lista 03
 - objetivo 
