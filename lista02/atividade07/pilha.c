@@ -47,6 +47,6 @@ void imprimirPilha(Pilha *pilha) {
 void limparPilha(Pilha *pilha) {
     Elemento *topo_elemento;
     while ((topo_elemento = desempilhar(pilha) ) != NULL) {
-        topo_elemento = topo_elemento->proximo_elemento;
+        free(topo_elemento);
     }
 }
