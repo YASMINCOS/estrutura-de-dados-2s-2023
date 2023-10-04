@@ -14,3 +14,4 @@ void empilhar(Pilha *pilha, int numero, const char *item);
 Elemento *desempilhar(Pilha *pilha);
 int qtd_pilha(Pilha pilha);
 void imprimirPilha(Pilha *pilha);
+void limparPilha(Pilha *pilha);

@@ -2,16 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 #include "fila.h"
+#include "pilha.h"
 
 #define ADIICIONAR_PEDIDO 1
 #define ATENDER_PEDIDO 2
 #define MOSTRAR_LISTA 3
+#define MOSTRAR_HISTORICO 4
+#define LIMPAR_HISTORICO 5
 #define SAIR 0
 
 const char *MENU[] = {
     "1. Adicionar Pedido",
     "2. Atender Pedido",
-    "3. Mostrar lista de Pedidos",
+    "3. Lista de Pedidos",
+    "4. Historico de Pedidos",
+    "5. Limpar Historico",
     "0. Sair",
     NULL
 };
@@ -20,6 +25,7 @@ void mostrarMenu();
 
 int main() {
     FilaPedidos* fila = criarFila();
+    Pilha *Historico = criarPilha();
     char item[50];
     int numero = 0;
     int op;
@@ -35,6 +41,7 @@ int main() {
                 fflush(stdin);
                 printf("Pedido: "); gets(item);
                 adicionarPedido(fila, ++numero, item);
+                empilhar(Historico, numero, item);
                 break;
             case ATENDER_PEDIDO:
                 atenderPedido(fila);
@@ -42,6 +49,14 @@ int main() {
             case MOSTRAR_LISTA:
                 system("cls");
                 imprimirFila(fila);
+                break;
+            case MOSTRAR_HISTORICO:
+                system("cls");
+                imprimirPilha(Historico);
+                break;
+            case LIMPAR_HISTORICO:
+                limparPilha(Historico);
+                printf("Historico Limpo\n");
                 break;
             case SAIR:
                 exit(0);
