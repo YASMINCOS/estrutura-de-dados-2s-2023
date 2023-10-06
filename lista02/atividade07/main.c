@@ -1,77 +1,77 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h> //usar nas opções
 #include "fila.h"
 #include "pilha.h"
 
-/*
-//pilha
-void titulo_pilha();
-void menu_comidas();
-void menu_bebidas();
-*/
+#define ADIICIONAR_PEDIDO 1
+#define ATENDER_PEDIDO 2
+#define MOSTRAR_LISTA 3
+#define MOSTRAR_HISTORICO 4
+#define LIMPAR_HISTORICO 5
+#define SAIR 0
+
+const char *MENU[] = {
+    "1. Adicionar Pedido",
+    "2. Atender Pedido",
+    "3. Lista de Pedidos",
+    "4. Historico de Pedidos",
+    "5. Limpar Historico",
+    "0. Sair",
+    NULL
+};
+
+void mostrarMenu();
 
 int main() {
-    /*
-    char nome[50];
-    int tecla = 0;
-    int opcao = 1;
-
-    //pilha
-    titulo_pilha();
-    printf("\tQual o seu nome? ");
-    scanf("%[^\n]s", &nome);
-
-    do{
-        tecla = getch();
-        if (tecla == 0 || tecla == 224){
-            tecla = getch();
-        }
-        if (tecla == 72) {
-            titulo_pilha();
-            printf("\tO que vc quer pedir?\n\n");
-            printf("\t -> Comida\n");
-            printf("\t    Bebida");
-            opcao = 1;
-        }else if (tecla == 80){
-            titulo_pilha();
-            printf("\tO que vc quer pedir?\n\n");
-            printf("\t    Comida\n");
-            printf("\t -> Bebida");
-            opcao = 2;
-        }
-    } while(tecla != 13);
-
-    if(opcao == 1){
-        menu_comidas();
-    } else if (opcao == 2){
-        menu_bebidas();
-    }
-    */
-
     FilaPedidos* fila = criarFila();
+    Pilha *Historico = criarPilha();
+    char item[50];
+    int numero = 0;
+    int op;
 
-    adicionarPedido(fila, 1, "Hamburguer");
-    adicionarPedido(fila, 2, "Batata Frita");
-    adicionarPedido(fila, 3, "Refrigerante");
-    adicionarPedido(fila, 4, "Suco ");
+    do {
+        system("cls");
+        mostrarMenu();
+        printf("\nOpcao: ");
+        scanf("%d", &op);
 
-    printf("Pedidos na fila:\n");
-    imprimirFila(fila);
-
-    atenderPedido(fila);
-    atenderPedido(fila);
-
-    printf("\nPedidos restantes na fila:\n");
-    imprimirFila(fila);
+        switch (op) {
+            case ADIICIONAR_PEDIDO:
+                fflush(stdin);
+                printf("Pedido: "); gets(item);
+                adicionarPedido(fila, ++numero, item);
+                empilhar(Historico, numero, item);
+                break;
+            case ATENDER_PEDIDO:
+                atenderPedido(fila);
+                break;
+            case MOSTRAR_LISTA:
+                system("cls");
+                imprimirFila(fila);
+                break;
+            case MOSTRAR_HISTORICO:
+                system("cls");
+                imprimirPilha(Historico);
+                break;
+            case LIMPAR_HISTORICO:
+                limparPilha(Historico);
+                printf("Historico Limpo\n");
+                break;
+            case SAIR:
+                exit(0);
+            default:
+                printf("opcao invalida!\n");
+        }
+        system("pause");
+    } while(1);
 
     return 0;
 }
 
-/*
-void titulo_pilha() {
-    system("cls");
-    printf("PILHA\n\n");
+void mostrarMenu() {
+    int i;
+    for (i = 0; MENU[i] != NULL; i++) {
+        puts(MENU[i]);
+    }
 }
-*/

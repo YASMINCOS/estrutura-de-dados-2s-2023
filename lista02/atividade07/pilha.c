@@ -37,9 +37,16 @@ int qtd_pilha(Pilha pilha) {
 
 void imprimirPilha(Pilha *pilha) {
     Elemento *topo_elemento = pilha->topo;
-    printf("Pilha de Elementos:\n");
+    printf("Historico:\n");
     while (topo_elemento != NULL) {
-        printf("Elemento #%d: %s\n", topo_elemento->numero, topo_elemento->item);
+        printf("Pedido #%d: %s\n", topo_elemento->numero, topo_elemento->item);
         topo_elemento = topo_elemento->proximo_elemento;
+    }
+}
+
+void limparPilha(Pilha *pilha) {
+    Elemento *topo_elemento;
+    while ((topo_elemento = desempilhar(pilha) ) != NULL) {
+        free(topo_elemento);
     }
 }
