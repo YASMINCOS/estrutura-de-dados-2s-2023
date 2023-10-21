@@ -6,8 +6,8 @@
 - objetivo: Ordenação, Pilhas - FILO (First In Last Out), Filas - FIFO (First In First Out).
 - conteudo
 # Lista 03
-- objetivo 
-- conteudo
+- objetivo: Recursividade
+- conteudo: Listas, Lista encadeada
 
 # COMPILAR
 gcc nome do arquivo -o main
