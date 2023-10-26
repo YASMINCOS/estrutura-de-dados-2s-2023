@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/tiyas/estrutura-de-dados-2s-2023/lista02/atividade05",
-      "program": "c:/Users/tiyas/estrutura-de-dados-2s-2023/lista02/atividade05/build/Debug/outDebug",
+      "cwd": "c:/Users/tiyas/estrutura-de-dados-2s-2023/lista02/atividade07/pedidos_fila",
+      "program": "c:/Users/tiyas/estrutura-de-dados-2s-2023/lista02/atividade07/pedidos_fila/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
