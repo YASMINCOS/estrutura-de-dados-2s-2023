@@ -6,16 +6,16 @@
 
 Hash* tabela[TAMANHO];
 
-unsigned int hash (char* chave) {
+unsigned int hash(char* chave) {
    unsigned h = 0;
    for (int i = 0; chave[i] != '\0'; i++) {
-      h += chave[i];
+      h += 
+      [i];
    }
    return h;
 }
 
 char* get(char* chave){
-
     unsigned int indice = hash(chave);
     Hash* atual = tabela[indice];
 

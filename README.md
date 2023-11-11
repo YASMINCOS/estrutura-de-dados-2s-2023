@@ -6,7 +6,7 @@
 - objetivo: Ordenação, Pilhas - FILO (First In Last Out), Filas - FIFO (First In First Out).
 - conteudo
 # Lista 03
-- objetivo: Recursividade
+- objetivo: Recursividade, Busca Binária.
 - conteudo: Listas, Lista encadeada
 
 # COMPILAR
